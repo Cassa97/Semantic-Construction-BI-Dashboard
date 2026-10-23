@@ -22,7 +22,8 @@ The workflow described in the study comprises the following stages:
 
 **Simplified flow:**
 
-`IFC / schedule / cost sources → RDF datasets + manually prepared assignments → knowledge graph → SPARQL queries → CSV exports → Power BI dashboard`
+[Figure2.pdf](https://github.com/user-attachments/files/33867959/Figure2.pdf)
+
 
 The sample RDF dataset made available with the research package is intended to allow reproduction of the workflow **starting from the prepared semantic data**. Reproduction of the original native-file-to-RDF conversion process requires the separate conversion tools and source files used in the earlier research.
 
