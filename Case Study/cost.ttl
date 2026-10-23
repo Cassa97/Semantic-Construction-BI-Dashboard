@@ -1,0 +1,817 @@
+# baseURI: http://w3id.org/ci
+# imports: http://w3id.org/cterm
+
+@prefix ci: <https://w3id.org/ci#> .
+@prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/ci>
+  rdf:type owl:Ontology ;
+  dc:bibliographicCitation "" ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:claudio.mirarchi@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
+          schema:name "Politecnico di Milano, Dipartimento ABC" ;
+        ] ;
+      schema:name "Mirarchi, Claudio" ;
+    ] ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:katharina.sigalov@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-3070-0759> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Sigalov, Katharina" ;
+    ] ;
+  dc:created "2024-10-12"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:jacopo.cassandro@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Cassandro, Jacopo" ;
+    ] ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Ruhr University Bochum, Computing in Engineering" ;
+        ] ;
+      schema:memberOf [
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Hagedorn, Philipp" ;
+    ] ;
+  dc:description "The Cost Item (CI) Ontology is based on concepts and principles of construction project cost estimation an can be used together with the Construction Resources (CR) ontology and can use terminology from the Construction Terminology (CTERM)."@en ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:modified "2025-04-07"^^xsd:date ;
+  dc:rights "Copyright 2025 by DABC, PoliMi" ;
+  dc:title "The Cost Item (CI) Ontology"@en ;
+  vann:preferredNamespacePrefix "ci" ;
+  vann:preferredNamespaceUri <http://w3id.org/ci#> ;
+  owl:imports <http://w3id.org/cterm> ;
+  owl:versionInfo "0.2" ;
+  <https://schema.org/schema:codeRepository> <https://github.com/cpm-ont-network/cost> ;
+.
+ci:Activity
+  rdf:type owl:Class ;
+  rdfs:label "Activity" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfActivity ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfActivity ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfActivity ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfActivity ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:techSpecs ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:TemporaryComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:EquipmentResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:LabourResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:someValuesFrom cterm:FunctionOfActivity ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:someValuesFrom cterm:UseOfActivity ;
+    ] ;
+.
+ci:ConstructionComponent
+  rdf:type owl:Class ;
+  rdfs:label "Construction Work" ;
+  rdfs:subClassOf ci:CostComponent ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:WorkOfConstructionComponent ;
+      owl:onProperty ci:hasWork ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith ci:ProductComponent ;
+  owl:disjointWith ci:TemporaryComponent ;
+.
+ci:CostComponent
+  rdf:type owl:Class ;
+  rdfs:label "CostComponent" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfCostComponent ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfCostComponent ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfCostComponent ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Activity ;
+      owl:onProperty ci:hasActivity ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:partOf ;
+      owl:someValuesFrom ci:CostItem ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasClassification ;
+      owl:someValuesFrom cterm:Classification ;
+    ] ;
+.
+ci:CostItem
+  rdf:type owl:Class ;
+  rdfs:label "CostItem" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty ci:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:prefix ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasPart ;
+      owl:someValuesFrom ci:CostComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasClassification ;
+      owl:someValuesFrom cterm:Classification ;
+    ] ;
+  owl:equivalentClass ci:ProductionResult ;
+.
+ci:ProductComponent
+  rdf:type owl:Class ;
+  rdfs:label "Product Work" ;
+  rdfs:subClassOf ci:CostComponent ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:WorkOfProductComponent ;
+      owl:onProperty ci:hasWork ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith ci:ConstructionComponent ;
+  owl:disjointWith ci:TemporaryComponent ;
+.
+ci:ProductionResult
+  rdf:type owl:Class ;
+  rdfs:label "ProductionResult" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasPart ;
+      owl:someValuesFrom ci:CostComponent ;
+    ] ;
+  owl:equivalentClass ci:CostItem ;
+.
+ci:TemporaryComponent
+  rdf:type owl:Class ;
+  rdfs:label "Temporary Work" ;
+  rdfs:subClassOf ci:CostComponent ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:WorkOfTemporaryComponent ;
+      owl:onProperty ci:hasWork ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith ci:ConstructionComponent ;
+  owl:disjointWith ci:ProductComponent ;
+.
+ci:Work
+  rdf:type owl:Class ;
+  rdfs:label "Work" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfWork ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty ci:cam ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:techSpecs ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:law ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasDimensionParameter ;
+      owl:someValuesFrom cterm:DimensionParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasOtherStandard ;
+      owl:someValuesFrom cterm:Standard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPerformanceParameter ;
+      owl:someValuesFrom cterm:PerformanceParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPhysicalParameter ;
+      owl:someValuesFrom cterm:PhysicalParameter ;
+    ] ;
+.
+ci:WorkOfConstructionComponent
+  rdf:type owl:Class ;
+  rdfs:label "WorkOfConstructionWork" ;
+  rdfs:subClassOf ci:Work ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ConstructionComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ProductComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasAspect ;
+      owl:someValuesFrom cterm:AspectOfWorkOfConstructionWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFinishing ;
+      owl:someValuesFrom cterm:FinishingOfWorkOfConstructionWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:someValuesFrom cterm:FunctionOfWorkOfConstructionWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:someValuesFrom cterm:UseOfWorkOfConstructionWork ;
+    ] ;
+  owl:disjointWith ci:WorkOfProductComponent ;
+  owl:disjointWith ci:WorkOfTemporaryComponent ;
+.
+ci:WorkOfProductComponent
+  rdf:type owl:Class ;
+  rdfs:label "WorkOfProductWork" ;
+  rdfs:subClassOf ci:Work ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfWorkOfProductWork ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfWorkOfProductWork ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfWorkOfProductWork ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasAspect ;
+      owl:someValuesFrom cterm:AspectOfWorkOfProductWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFinishing ;
+      owl:someValuesFrom cterm:FinishingOfWorkOfProductWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:someValuesFrom cterm:FunctionOfWorkOfProductWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:someValuesFrom cterm:UseOfWorkOfProductWork ;
+    ] ;
+  owl:disjointWith ci:WorkOfConstructionComponent ;
+  owl:disjointWith ci:WorkOfTemporaryComponent ;
+.
+ci:WorkOfTemporaryComponent
+  rdf:type owl:Class ;
+  rdfs:label "WorkOfTemporaryWork" ;
+  rdfs:subClassOf ci:Work ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ProductComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:EquipmentResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasAspect ;
+      owl:someValuesFrom cterm:AspectOfWorkOfTemporaryWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFinishing ;
+      owl:someValuesFrom cterm:FinishingOfWorkOfTemporaryWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:someValuesFrom cterm:FunctionOfWorkOfTemporaryWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:someValuesFrom cterm:UseOfWorkOfTemporaryWork ;
+    ] ;
+  owl:disjointWith ci:WorkOfConstructionComponent ;
+  owl:disjointWith ci:WorkOfProductComponent ;
+.
+ci:activityOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:label "activity of" ;
+  rdfs:range ci:CostComponent ;
+  owl:inverseOf ci:hasActivity ;
+.
+ci:cam
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "environmental and ecological requirements defined by the Italian Ministry of Environment" ;
+  rdfs:range xsd:boolean ;
+.
+ci:code
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostItem
+          ci:CostComponent
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "code" ;
+  rdfs:range xsd:string ;
+.
+ci:descriptionDetail
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "descriptionDetail" ;
+  rdfs:range xsd:string ;
+.
+ci:descriptionGeneral
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "descriptionGeneral" ;
+  rdfs:range xsd:string ;
+.
+ci:excluded
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "excluded" ;
+  rdfs:range xsd:string ;
+.
+ci:hasActivity
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "hasActivity" ;
+  rdfs:range ci:Activity ;
+  owl:inverseOf ci:activityOf ;
+.
+ci:hasPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostItem
+          ci:ProductionResult
+        ) ;
+    ] ;
+  rdfs:label "hasPart" ;
+  rdfs:range ci:CostComponent ;
+  owl:inverseOf ci:partOf ;
+.
+ci:hasSubComponent
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "hasSubComponent" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          cr:Resource
+        ) ;
+    ] ;
+  owl:inverseOf ci:subComponentOf ;
+.
+ci:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
+  owl:equivalentProperty cr:hasUnit ;
+  owl:equivalentProperty cterm:hasUnit ;
+  owl:inverseOf ci:unitOf ;
+.
+ci:hasWork
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "hasWork" ;
+  rdfs:range ci:Work ;
+  owl:inverseOf ci:workOf ;
+.
+ci:included
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "included" ;
+  rdfs:range xsd:string ;
+.
+ci:keywords
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "keywords" ;
+  rdfs:range xsd:string ;
+.
+ci:law
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "law" ;
+  rdfs:range xsd:string ;
+.
+ci:measurementRules
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "measurementRules" ;
+  rdfs:range xsd:string ;
+.
+ci:partOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "partOf" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostItem
+          ci:ProductionResult
+        ) ;
+    ] ;
+  owl:inverseOf ci:hasPart ;
+.
+ci:prefix
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostItem ;
+  rdfs:label "prefisso"@it ;
+  rdfs:label "prefix"@en ;
+  rdfs:range xsd:string ;
+.
+ci:quantityUnitOfMeasure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "quantityUnitOfMeasure" ;
+  rdfs:range xsd:integer ;
+.
+ci:subComponentOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          cr:Resource
+        ) ;
+    ] ;
+  rdfs:label "subComponentOf" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  owl:inverseOf ci:hasSubComponent ;
+.
+ci:techSpecs
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  rdfs:label "tech specs" ;
+  rdfs:range xsd:string ;
+.
+ci:unitOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain qudt:Unit ;
+  rdfs:label "unitOf" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ci:CostComponent
+          ci:Work
+          ci:Activity
+        ) ;
+    ] ;
+  owl:inverseOf ci:hasUnit ;
+.
+ci:unitPrice
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:CostItem ;
+  rdfs:label "unit price" ;
+  rdfs:range xsd:decimal ;
+.
+ci:workOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "workOf" ;
+  rdfs:range ci:CostComponent ;
+  owl:inverseOf ci:hasWork ;
+.

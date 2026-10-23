@@ -1,0 +1,1279 @@
+# baseURI: http://example.org/casestudy
+# imports: http://w3id.org/ci
+# imports: http://w3id.org/cr
+# imports: http://w3id.org/cterm
+# imports: https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#
+# imports: https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling
+# imports: https://www.dinmedia.de/en/standard/din-276
+# prefix: casestudy
+
+@prefix casestudy: <http://example.org/casestudy#> .
+@prefix ci: <https://w3id.org/ci#> .
+@prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
+@prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology#> .
+@prefix geometry: <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/casestudy>
+  rdf:type owl:Ontology ;
+  owl:imports <http://w3id.org/ci> ;
+  owl:imports <http://w3id.org/cr> ;
+  owl:imports <http://w3id.org/cterm> ;
+  owl:imports geometry: ;
+  owl:imports <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling> ;
+  owl:imports <https://www.dinmedia.de/en/standard/din-276> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://example.org/casestudy#Activity_LV.Pa02.E9700.0505.->
+  rdf:type ci:Activity ;
+  rdfs:label "Activity LV.Pa02.E9700.0505.-" ;
+  ci:ActivityOf <http://example.org/casestudy#ConstructionComponent_OC.EEA.a02.E9700.Sb017.0255.-> ;
+  ci:code "LV.Pa02.E9700.0505.-" ;
+  ci:descriptionGeneral "Posa." ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+  cterm:hasCategory cterm:Realization ;
+  cterm:hasFamily cterm:Production ;
+  cterm:hasObject cterm:Laying ;
+.
+<http://example.org/casestudy#Activity_LV.Pa04.A1020.0000.->
+  rdf:type ci:Activity ;
+  rdfs:label "Activity LV.Pa04.A1020.0000.-" ;
+  ci:ActivityOf <http://example.org/casestudy#TemporaryComponent_LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  ci:code "LV.Pa04.A1020.0000.-" ;
+  ci:descriptionGeneral "Formazione" ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+  cterm:hasCategory cterm:Realization ;
+  cterm:hasFamily cterm:Production ;
+  cterm:hasObject cterm:Forming ;
+.
+<http://example.org/casestudy#Activity_LV.Pa10.A6415.0500.->
+  rdf:type ci:Activity ;
+  rdfs:label "Activity LV.Pa10.A6415.0500.-" ;
+  ci:code "LV.Pa10.A6415.0500.-" ;
+  ci:descriptionDetail """RP2 Gru a torre a rotazione in alto; altezza sotto gancio [m] ≤ 34,0 | sbraccio [m] ≤ 31,0; portata [t] ≤ 1,0; escluso: f.e.m., escluso basamento
+SPECIFICHE TECNICHE: già installata; criterio di misurazione: giorno di presenza in cantiere""" ;
+  ci:descriptionGeneral """Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.""" ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+  cterm:hasCategory cterm:Realization ;
+  cterm:hasFamily cterm:Production ;
+  cterm:hasObject cterm:Casting ;
+.
+<http://example.org/casestudy#Activity_LV.Pa10.E5100.3750.->
+  rdf:type ci:Activity ;
+  ci:code "LV.Pa10.E5100.3750.-" ;
+  ci:descriptionGeneral "Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30." ;
+  ci:hasSubComponent <http://example.org/casestudy#EquipmentResource_RP.00.30.05.0010.a> ;
+  ci:hasSubComponent <http://example.org/casestudy#EquipmentResource_RP.01.00.00.0040.a> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+  ci:hasSubComponent <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Realization ;
+  cterm:hasFamily cterm:Production ;
+  cterm:hasObject cterm:Casting ;
+  cterm:hasType cterm:WithPump ;
+.
+casestudy:AssignmentSet_Cost-Geo1
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Geo Casting Concrete Foudation" ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_1 ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_4 ;
+.
+casestudy:AssignmentSet_Cost-Geo2
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Geo Formwork Foundation" ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_2 ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_5 ;
+.
+casestudy:AssignmentSet_Cost-Geo3
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Geo Rebar Foundation" ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_3 ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_6 ;
+.
+casestudy:AssignmentSet_Cost-Geo4
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Geo Casting SubFoundation" ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_7 ;
+  cr:hasAssignment casestudy:CostItemToGeometryAssignment_9 ;
+.
+casestudy:AssignmentSet_Cost-Res1
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Res1" ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_1 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_2 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_3 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_4 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_5 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_6 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_7 ;
+.
+casestudy:AssignmentSet_Cost-Res2
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Res2" ;
+.
+casestudy:AssignmentSet_Cost-Res3
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Res3" ;
+.
+casestudy:AssignmentSet_Cost-Res4
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Cost-Res4" ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_17 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_18 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_19 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_20 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_21 ;
+  cr:hasAssignment casestudy:ResourceToCostItemAssignment_22 ;
+.
+casestudy:AssignmentSet_Task-Cost1
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Cost1" ;
+  cr:hasAssignment casestudy:TaskToCostItemAssignment_1 ;
+.
+casestudy:AssignmentSet_Task-Cost2
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Cost2" ;
+  cr:hasAssignment casestudy:TaskToCostItemAssignment_2 ;
+  cr:hasAssignment casestudy:TaskToCostItemAssignment_3 ;
+  cr:hasAssignment casestudy:TaskToCostItemAssignment_4 ;
+  cr:hasAssignment casestudy:TaskToCostItemAssignment_5 ;
+.
+casestudy:AssignmentSet_Task-Geo1
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Geo1" ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_1 ;
+.
+casestudy:AssignmentSet_Task-Geo2
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Geo2" ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_2 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_3 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_4 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_5 ;
+.
+casestudy:AssignmentSet_Task-Geo3
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Geo3" ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_6 ;
+.
+casestudy:AssignmentSet_Task-Geo4
+  rdf:type cr:AssignmentSet ;
+  rdfs:label "Assignment set Task-Geo4" ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_10 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_7 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_8 ;
+  cr:hasAssignment casestudy:TaskToGeometryAssignment_9 ;
+.
+casestudy:Classification_1
+  rdf:type cterm:Classification ;
+  rdfs:label "Classification 1" ;
+  cterm:code <https://www.dinmedia.de/en/standard/din-276#KG322> ;
+  cterm:hasClassificationSystem cterm:DIN276 ;
+.
+casestudy:Classification_2
+  rdf:type cterm:Classification ;
+  rdfs:label "Classification 2" ;
+  cterm:code <https://www.dinmedia.de/en/standard/din-276#KG322> ;
+  cterm:hasClassificationSystem cterm:DIN276 ;
+.
+casestudy:Classification_3
+  rdf:type cterm:Classification ;
+  rdfs:label "Classification 3" ;
+  cterm:code "A1010 – Standard Foundations" ;
+  cterm:hasClassificationSystem cterm:Uniformat ;
+.
+<http://example.org/casestudy#ConstructionComponent_OC.EEA.Pa10.A6415.J0001.0025.->
+  rdf:type ci:ConstructionComponent ;
+  rdfs:label "Construction component OC.EEA.Pa10.A6415.J0001.0025.-" ;
+  ci:code "OC.EEA.Pa10.A6415.J0001.0025.-" ;
+  ci:descriptionGeneral """OPERA: Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0.
+LAVORO: Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.""" ;
+  ci:hasActivity <http://example.org/casestudy#Activity_LV.Pa10.A6415.0500.-> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:hasWork <http://example.org/casestudy#WorkOfConstructionComponent_OP.A6415.J0001.0025.-> ;
+  ci:partOf <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cterm:hasCategory cterm:Buildings ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Residences ;
+.
+<http://example.org/casestudy#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b>
+  rdf:type ci:ConstructionComponent ;
+  ci:code "OC.EEA.Pa10.E5100.J0001.0000.b" ;
+  ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia 
+	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30. 
+	RP2 Vibratore per calcestruzzo; diametro testa [mm] = 45 ; potenza [kW] = 1; peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere 
+	RP2 Pompa autocarrata 
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  ci:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+  ci:hasActivity <http://example.org/casestudy#Activity_LV.Pa10.E5100.3750.-> ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M3> ;
+  ci:hasWork <http://example.org/casestudy#WorkOfConstructionComponent_OP.E5100.J0001.0000.b> ;
+  ci:partOf <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Buildings ;
+  cterm:hasClassification casestudy:StLB ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Residences ;
+.
+<http://example.org/casestudy#ConstructionComponent_OC.EEA.a02.E9700.Sb017.0255.->
+  rdf:type ci:ConstructionComponent ;
+  rdfs:label "Construction component OC.EEA.a02.E9700.Sb017.0255.-" ;
+  ci:code "OC.EEA.a02.E9700.Sb017.0255.-" ;
+  ci:descriptionDetail """OP1 OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato. Incluso: sormonti; sfrido; legature.
+	RM2 Barra nervata di lega ferrosa acciaio B450C; funzione: strutturale; impiego: strutture in conglomerato cementizio armato
+	SPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento
+	RM2 Ferramenta filo di metallo ferro
+	SPECIFICHE TECNICHE: filo di metallo ferro cotto
+LV1 LAVORO: Posa.""" ;
+  ci:descriptionGeneral """OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in cemento armato. Incluso: sormonti; sfrido; legature.
+LAVORO: Posa.""" ;
+  ci:hasActivity <http://example.org/casestudy#Activity_LV.Pa02.E9700.0505.-> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  ci:hasWork <http://example.org/casestudy#WorkOfConstructionComponent_OP.E9700.Sb017.0255.-> ;
+  ci:partOf <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Buildings ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasMaterial cterm:FerrousAlloySteelB450C ;
+  cterm:hasObject cterm:Residences ;
+.
+casestudy:CostItemToGeometryAssignment_1
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 1" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refParamFormula "Volume*1.1" ;
+  cr:refParamQuantity 130.6624 ;
+.
+casestudy:CostItemToGeometryAssignment_2
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 2" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refParamFormula "Perimeter*Thickness" ;
+  cr:refParamQuantity 38.5128 ;
+.
+casestudy:CostItemToGeometryAssignment_3
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 3" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refParamFormula "Volume*100" ;
+  cr:refParamQuantity 11878.4 ;
+.
+casestudy:CostItemToGeometryAssignment_4
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 4" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refParamFormula "Volume*1.1" ;
+  cr:refParamQuantity 3.0921 ;
+.
+casestudy:CostItemToGeometryAssignment_5
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 5" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refParamFormula "Perimeter*Thickness" ;
+  cr:refParamQuantity 4.5 ;
+.
+casestudy:CostItemToGeometryAssignment_6
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 6" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refParamFormula "Volume*100" ;
+  cr:refParamQuantity 281.1 ;
+.
+casestudy:CostItemToGeometryAssignment_7
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 7" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refGeometry geometry:IfcSlab_2649 ;
+  cr:refParamQuantity 0.8019 ;
+.
+casestudy:CostItemToGeometryAssignment_9
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 9" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Geo4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refGeometry geometry:IfcSlab_1051 ;
+  cr:refParamQuantity 29.8067 ;
+.
+casestudy:DimensionParameter_1
+  rdf:type cterm:DimensionParameter ;
+  cterm:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Diameter ;
+  cterm:parameterValue1 "30" ;
+.
+casestudy:DimensionParameter_2
+  rdf:type cterm:DimensionParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:HeadDiameter ;
+  cterm:parameterValue1 "45" ;
+.
+casestudy:DimensionParameter_3
+  rdf:type cterm:DimensionParameter ;
+  cterm:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Diameter ;
+  cterm:parameterValue1 "32" ;
+.
+casestudy:DimensionParameter_4
+  rdf:type cterm:DimensionParameter ;
+  cterm:parameterSymbol1 "≤" ;
+  cterm:parameterType cterm:HookHeight ;
+  cterm:parameterValue1 "34" ;
+.
+casestudy:DimensionParameter_5
+  rdf:type cterm:DimensionParameter ;
+  cterm:parameterSymbol1 "≤" ;
+  cterm:parameterType cterm:Arm ;
+  cterm:parameterValue1 "31" ;
+.
+casestudy:DimensionParameter_6
+  rdf:type cterm:DimensionParameter ;
+  cterm:hasUnit <https://qudt.org/vocab/unit/MilliM> ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterSymbol2 "÷" ;
+  cterm:parameterType cterm:Thickness ;
+  cterm:parameterValue1 "25" ;
+  cterm:parameterValue2 "27" ;
+.
+casestudy:DimensionParameter_7
+  rdf:type cterm:DimensionParameter ;
+  cterm:hasUnit <https://qudt.org/vocab/unit/M> ;
+  cterm:parameterSymbol1 "≤" ;
+  cterm:parameterType cterm:Height ;
+  cterm:parameterValue1 "3.5" ;
+.
+casestudy:DimensionParameter_8
+  rdf:type cterm:DimensionParameter ;
+  rdfs:label "Dimension parameter 8" ;
+  cterm:hasUnit <https://qudt.org/vocab/unit/M> ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterSymbol2 "÷" ;
+  cterm:parameterType cterm:Height ;
+  cterm:parameterValue1 "1,80" ;
+  cterm:parameterValue2 "3,60" ;
+.
+<http://example.org/casestudy#EquipmentResource_RP.00.30.05.0010.a>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RP.00.30.05.0010.a" ;
+  cr:descriptionGeneral "Pompa autocarrataSPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30; criterio di misurazione: per metro cubo pompato di calcestruzzo" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "per quantità di calcestruzzo [m³] ≤ 30" ;
+  cterm:hasCategory cterm:MechanizedHandling ;
+  cterm:hasFamily cterm:Handling ;
+  cterm:hasObject cterm:ConcretePumps ;
+  cterm:hasType cterm:Truck-MountedPump ;
+.
+<http://example.org/casestudy#EquipmentResource_RP.00.30.05.0010.b>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RP.00.30.05.0010.b" ;
+  cr:descriptionGeneral "Pompa autocarrataSPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] > 30; criterio di misurazione: per metro cubo pompato di calcestruzzo" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "per quantità di calcestruzzo [m³] > 30" ;
+  cterm:hasCategory cterm:MechanizedHandling ;
+  cterm:hasFamily cterm:Handling ;
+  cterm:hasObject cterm:ConcretePumps ;
+  cterm:hasType cterm:Truck-MountedPump ;
+.
+<http://example.org/casestudy#EquipmentResource_RP.00.40.10.0010.b>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RP.00.40.10.0010.b" ;
+  cr:descriptionGeneral "Gru a torre a rotazione in alto; altezza sotto gancio [m] ≤ 34,0 | sbraccio [m] ≤ 31,0; portata [t] ≤ 1,0; escluso: f.e.m., escluso basamento" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 82.22 ;
+  cterm:hasCategory cterm:AerialHandling ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_4 ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_5 ;
+  cterm:hasFamily cterm:Handling ;
+  cterm:hasObject cterm:TowerCranes ;
+  cterm:hasType cterm:TowerCraneRotatingAtTheTop ;
+.
+<http://example.org/casestudy#EquipmentResource_RP.01.00.00.0040.a>
+  rdf:type cr:EquipmentResource ;
+  cr:accessory "false"^^xsd:boolean ;
+  cr:code "RP.01.00.00.0040.a" ;
+  cr:descriptionGeneral "Vibratore per calcestruzzo; diametro testa [mm] = 45; potenza [kW] = 1; peso [kg] = 14" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Mixing ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_2 ;
+  cterm:hasFamily cterm:Semi-FinishedProducts ;
+  cterm:hasObject cterm:ConcreteVibrator ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_6 ;
+  cterm:hasPhysicalParameter casestudy:PhysicalParameter_1 ;
+.
+<http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.b>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RT.00.00.30.0010.b" ;
+  cr:descriptionGeneral "Cassaforma tradizionale in legno; impiego: fondazioni continue; spessore paramento [mm] = 25 ÷ 27. Incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi, disarmante, chiodi)SPECIFICHE TECNICHE: criteri di misurazione valutato a superficie effettiva bagnata dal getto." ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M2> ;
+  cr:included "ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi, disarmante, chiodi)" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 5.82 ;
+  cterm:hasCategory cterm:ProvisionalElements ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_6 ;
+  cterm:hasFamily cterm:Preparations ;
+  cterm:hasMaterial cterm:WoodVegetableFiber ;
+  cterm:hasObject cterm:Formwork ;
+  cterm:hasType cterm:TraditionalWoodenFormwork ;
+  cterm:hasUse cterm:ContinuousFoundations ;
+.
+<http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.c>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RT.00.00.30.0010.c" ;
+  cr:descriptionGeneral "Cassaforma tradizionale in legno; impiego: pareti in elevazione; altezza [m] ≤ 3,50 | spessore paramento [mm] = 25 ÷ 27; pressione [kN/m²] ≤ 40 . Incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, disarmante, chiodi). Escluso: puntelliSPECIFICHE TECNICHE: criteri di misurazione valutato a superficie effettiva bagnata dal getto." ;
+  cr:excluded "puntelli" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M2> ;
+  cr:included "ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, disarmante, chiodi)" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 6.20 ;
+  cterm:hasCategory cterm:ProvisionalElements ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_6 ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_7 ;
+  cterm:hasFamily cterm:Preparations ;
+  cterm:hasMaterial cterm:WoodVegetableFiber ;
+  cterm:hasObject cterm:Formwork ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_11 ;
+  cterm:hasType cterm:TraditionalWoodenFormwork ;
+  cterm:hasUse cterm:WallsinElevation ;
+.
+<http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.e>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RT.00.00.30.0010.e" ;
+  cr:descriptionGeneral "Cassaforma tradizionale in legno; impiego: pilastri a sezione rettangolare/quadrata; altezza [m] ≤ 3,50 | spessore paramento [mm] = 25 ÷ 27; pressione [kN/m²] ≤ 40 . Incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, cravatte, disarmante, chiodi). Escluso: puntelliSPECIFICHE TECNICHE: criteri di misurazione valutato a superficie effettiva bagnata dal getto." ;
+  cr:excluded "puntelli" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M2> ;
+  cr:included "ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, cravatte, disarmante, chiodi)" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 6.92 ;
+  cterm:hasCategory cterm:ProvisionalElements ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_6 ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_7 ;
+  cterm:hasFamily cterm:Preparations ;
+  cterm:hasMaterial cterm:WoodVegetableFiber ;
+  cterm:hasObject cterm:Formwork ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_11 ;
+  cterm:hasType cterm:TraditionalWoodenFormwork ;
+  cterm:hasUse cterm:Rectangular-SquareColumns ;
+.
+<http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.g>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RT.00.00.30.0010.g" ;
+  cr:descriptionGeneral "Cassaforma tradizionale in legno; impiego: solaio misto con travi in spessore per strutture piane; interpiano rustico [m] ≤ 3,50 | spessore paramento [mm] = 25 ÷ 27; pressione [kN/m²] ≤ 70 . Incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, orditure di legno, disarmante, chiodi). Escluso: puntelliSPECIFICHE TECNICHE: criteri di misurazione valutato a superficie effettiva bagnata dal getto." ;
+  cr:excluded "puntelli" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M2> ;
+  cr:included "ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete o pannelli compensati multistrato, cravatte, disarmante, chiodi)" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 6.92 ;
+  cterm:hasCategory cterm:ProvisionalElements ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_6 ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_7 ;
+  cterm:hasFamily cterm:Preparations ;
+  cterm:hasMaterial cterm:WoodVegetableFiber ;
+  cterm:hasObject cterm:Formwork ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_12 ;
+  cterm:hasType cterm:TraditionalWoodenFormwork ;
+  cterm:hasUse cterm:SolidSlabsandFloorsinReinforcedConcretewithDeepBeams ;
+.
+<http://example.org/casestudy#EquipmentResource_RT.00.00.30.0040.a>
+  rdf:type cr:EquipmentResource ;
+  cr:code "RT.00.00.30.0040.a" ;
+  cr:descriptionGeneral "Puntello di lega ferrosa generico; altezza [m] = 1,80 ÷ 3,60. Incluso: treppiede di stabilizzazione" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M2> ;
+  cr:included "treppiede di stabilizzazione" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:unitPrice 2.62 ;
+  cterm:hasCategory cterm:ProvisionalElements ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_8 ;
+  cterm:hasFamily cterm:Preparations ;
+  cterm:hasMaterial cterm:GenericFerrousAlloy ;
+  cterm:hasObject cterm:Prop ;
+.
+<http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LP.EEA.Pa04.A1020.Qa000.0000.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+	RT2 Cassaforma tradizionale in legno; impiego:  fondazioni continue; incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete 	o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi)
+	SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasPart <http://example.org/casestudy#TemporaryComponent_LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:prefix "LOM241." ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 19.38 ;
+  cterm:hasClassification casestudy:Classification_2 ;
+.
+<http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b>
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "OC.EEA.Pa10.E5100.J0001.0000.b" ;
+  ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30. 
+	RP2 Vibratore per calcestruzzo; diametro testa [mm] = 45 ; potenza [kW] = 1; peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere 
+	RP2 Pompa autocarrata 
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  ci:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+  ci:hasPart <http://example.org/casestudy#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:prefix "LOM241." ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 263.68 ;
+  cterm:hasClassification casestudy:Classification_1 ;
+  cterm:hasClassification casestudy:Classification_3 ;
+.
+<http://example.org/casestudy#LabourResource_RU.00.00.00.0005.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0005.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 3°; qualifica: specializzato" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level3 ;
+.
+<http://example.org/casestudy#LabourResource_RU.00.00.00.0010.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0010.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 2°; qualifica: qualificato" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level2 ;
+.
+<http://example.org/casestudy#LabourResource_RU.00.00.00.0015.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0015.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 1°; qualifica: comune" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level1 ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.00.00.00.G0000.0275.-_CAM" ;
+  cr:descriptionDetail "COMPONENTI: RM1 Legante generico di materiale genericoRM1 Aggregato generico di materiale generico; diametro massimo (Dmax) [mm] = 32RM1 Aggregato sabbia di materiale generico" ;
+  cr:descriptionGeneral "Impasto preconfezionato di cemento generico; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S4 | classe di resistenza [classe] = C16/20 | classe di esposizione [classe] = X0. Componenti: legante generico, aggregato generico, legante riciclato SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE" ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.0000.e> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.2500.a> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.10.Za000.0500.a> ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:keywords "impasto di calcestruzzo" ;
+  cr:law "dm 23/06/2022" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE" ;
+  cr:unitPrice 130.68 ;
+  cterm:hasCategory cterm:Systems ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasFurnishing cterm:TruckMixer ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:ReadyMixture ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_7 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_8 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_9 ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.00.00.00.G0000.0290.b_CAM" ;
+  cr:descriptionDetail "COMPONENTI: RM1 Legante idraulico di cemento generico; resistenza a compressione [classe] = 42.5 RM1 Aggregato di materiale generico; diametro massimo (Dmax) [mm] = 30 RM1 Aggregato sabbia di materiale generico" ;
+  cr:descriptionGeneral "Impasto preconfezionato di conglomerato cementizio; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150" ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.1755.c> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.2500.a> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.10.G0000.0250.e> ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:keywords "impasto di calcestruzzo" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "semifluido, test slump [mm] = 100 ÷ 150" ;
+  cr:unitPrice 164.32 ;
+  cterm:hasAspect cterm:Bulk ;
+  cterm:hasCategory cterm:Systems ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasFurnishing cterm:TruckMixer ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:ReadyMixture ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_3 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_4 ;
+  cterm:hasUse cterm:CementitiousCompound ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0300.k_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.00.00.00.G0000.0300.k_CAM" ;
+  cr:descriptionDetail "COMPONENTI: RM1 Legante generico di materiale genericoRM1 Aggregato generico di materiale generico; diametro massimo (Dmax) [mm] = 32RM1 Aggregato sabbia di materiale generico" ;
+  cr:descriptionGeneral "Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S4 | classe di resistenza [classe] = C25/30 | classe di esposizione [classe] = XC1/XC2. Componenti: legante generico, aggregato generico, legante riciclato SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE" ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.0000.e> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.2500.a> ;
+  cr:hasSubResource <http://example.org/casestudy#MaterialResource_RM.00.10.10.Za000.0500.a> ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:keywords "impasto di calcestruzzo" ;
+  cr:law "dm 23/06/2022" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE" ;
+  cr:unitPrice "140"^^xsd:decimal ;
+  cterm:hasCategory cterm:Systems ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasFurnishing cterm:TruckMixer ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:ReadyMixture ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_10 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_4 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_7 ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.0000.e>
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.00.10.05.Za000.0000.e" ;
+  cr:descriptionGeneral "Aggregato di materiale generico; diametro massimo (Dmax) [mm] = 32" ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM> ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_3 ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericMaterial ;
+  cterm:hasObject cterm:Aggregate ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.1755.c>
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.00.10.05.Za000.1755.c" ;
+  cr:descriptionGeneral "Aggregato di materiale generico; diametro massimo (Dmax) [mm] = 30" ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasDimensionParameter casestudy:DimensionParameter_1 ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericMaterial ;
+  cterm:hasObject cterm:Aggregate ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.10.05.Za000.2500.a>
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.00.10.05.Za000.2500.a" ;
+  cr:descriptionGeneral "Aggregato sabbia di materiale generico" ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM> ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasObject cterm:Aggregate ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.10.10.G0000.0250.e>
+  rdf:type cr:MaterialResource ;
+  cr:code "RM.00.10.10.G0000.0250.e" ;
+  cr:descriptionGeneral "Legante idraulico di cemento generico; resistenza a compressione [classe] = 42.5" ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasObject cterm:Binder ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_5 ;
+.
+<http://example.org/casestudy#MaterialResource_RM.00.10.10.Za000.0500.a>
+  rdf:type cr:MaterialResource ;
+  cr:code "RM.00.10.10.Za000.0500.a" ;
+  cr:descriptionGeneral "Legante generico di materiale generico" ;
+  cr:subRecourceOf <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM> ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasObject cterm:Binder ;
+.
+<http://example.org/casestudy#MaterialResource_RM.30.10.00.Sb017.0000.-_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.30.10.00.Sb017.0000.-_CAM" ;
+  cr:descriptionGeneral "Barra nervata di lega ferrosa acciaio B450C; funzione: strutturale; impiego: struttureSPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  cr:law "d.m. 17/01/2018" ;
+  cr:quantityUnitOfMeasure 100 ;
+  cr:unitPrice 63.50 ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:ReinforcementsandStrengthening ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasMaterial cterm:FerrousAlloySteelB450C ;
+  cterm:hasObject cterm:Rebar ;
+  cterm:hasType cterm:Ribbed ;
+  cterm:hasUse cterm:Reinforcment ;
+.
+<http://example.org/casestudy#MaterialResource_RM.30.10.25.Sb017.0000.-_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.30.10.25.Sb017.0000.-_CAM" ;
+  cr:descriptionGeneral "Rete elettrosaldata di lega ferrosa acciaio B450C; finitura: nervata; funzione: strutturale; impiego: armature" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  cr:law "d.m. 17/01/2018" ;
+  cr:quantityUnitOfMeasure 100 ;
+  cr:unitPrice 72.50 ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:ReinforcementsandStrengthening ;
+  cterm:hasFinishing cterm:Ribbed ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasMaterial cterm:FerrousAlloySteelB450C ;
+  cterm:hasObject cterm:Mesh ;
+  cterm:hasType cterm:Welded ;
+  cterm:hasUse cterm:Reinforcment ;
+.
+<http://example.org/casestudy#MaterialResource_RM.38.15.95.R0001.0300.->
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.38.15.95.R0001.0300.-" ;
+  cr:descriptionGeneral "Ferramenta filo di metallo ferroSPECIFICHE TECNICHE: filo di metallo ferro cotto" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "filo di metallo ferro cotto" ;
+  cr:unitPrice 0.87 ;
+  cterm:hasCategory cterm:Accessories ;
+  cterm:hasFamily cterm:Complementary ;
+  cterm:hasMaterial cterm:IronMetal ;
+  cterm:hasObject cterm:Ironware ;
+  cterm:hasType cterm:Wire ;
+  cterm:hasUse cterm:Reinforcment ;
+.
+casestudy:PerformanceParameter_1
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C25/30" ;
+.
+casestudy:PerformanceParameter_10
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ExposureClass ;
+  cterm:parameterValue1 "XC1/XC2" ;
+.
+casestudy:PerformanceParameter_11
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "≤" ;
+  cterm:parameterType cterm:Pressure ;
+  cterm:parameterValue1 "40" ;
+.
+casestudy:PerformanceParameter_12
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "≤" ;
+  cterm:parameterType cterm:Pressure ;
+  cterm:parameterValue1 "70" ;
+.
+casestudy:PerformanceParameter_13
+  rdf:type cterm:PerformanceParameter ;
+  rdfs:label "Performance parameter 13" ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C16/20" ;
+.
+casestudy:PerformanceParameter_14
+  rdf:type cterm:PerformanceParameter ;
+  rdfs:label "Performance parameter 14" ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ExposureClass ;
+  cterm:parameterValue1 "X0" ;
+.
+casestudy:PerformanceParameter_2
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ExposureClass ;
+  cterm:parameterValue1 "XC2" ;
+.
+casestudy:PerformanceParameter_3
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ConsistencyClass ;
+  cterm:parameterValue1 "S3" ;
+.
+casestudy:PerformanceParameter_4
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C25/30" ;
+.
+casestudy:PerformanceParameter_5
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionResistance ;
+  cterm:parameterValue1 "42,5" ;
+.
+casestudy:PerformanceParameter_6
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Power ;
+  cterm:parameterValue1 "1" ;
+.
+casestudy:PerformanceParameter_7
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ConsistencyClass ;
+  cterm:parameterValue1 "S4" ;
+.
+casestudy:PerformanceParameter_8
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C16/20" ;
+.
+casestudy:PerformanceParameter_9
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ExposureClass ;
+  cterm:parameterValue1 "X0" ;
+.
+casestudy:PhysicalParameter_1
+  rdf:type cterm:PhysicalParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Weight ;
+  cterm:parameterValue1 "14" ;
+.
+<http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "OC.EEA.Pa02.E9700.Sb017.0255.-" ;
+  ci:descriptionDetail """OP1 OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato. Incluso: sormonti; sfrido; legature.
+	RM2 Barra nervata di lega ferrosa acciaio B450C; funzione: strutturale; impiego: strutture in conglomerato cementizio armato
+	SPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento
+	RM2 Ferramenta filo di metallo ferro
+	SPECIFICHE TECNICHE: filo di metallo ferro cotto
+LV1 LAVORO: Posa.""" ;
+  ci:descriptionGeneral """OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato. Incluso: sormonti; sfrido; legature.
+LAVORO: Posa.""" ;
+  ci:hasPart <http://example.org/casestudy#ConstructionComponent_OC.EEA.a02.E9700.Sb017.0255.-> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  ci:prefix "LOM241." ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 1.71 ;
+.
+casestudy:ResourceToCostItemAssignment_1
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 1" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.08" ;
+  cr:refResource <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+.
+casestudy:ResourceToCostItemAssignment_10
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 10" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refParamUtilizationFactor "0.11" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+.
+casestudy:ResourceToCostItemAssignment_11
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 11" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refParamUtilizationFactor "0.11" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+.
+casestudy:ResourceToCostItemAssignment_12
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 12" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refParamUtilizationFactor "0.0105" ;
+  cr:refResource <http://example.org/casestudy#MaterialResource_RM.30.10.00.Sb017.0000.-_CAM> ;
+.
+casestudy:ResourceToCostItemAssignment_13
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 13" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refParamUtilizationFactor "0.04" ;
+  cr:refResource <http://example.org/casestudy#MaterialResource_RM.38.15.95.R0001.0300.-> ;
+.
+casestudy:ResourceToCostItemAssignment_14
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 14" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refParamUtilizationFactor "0.0057" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+.
+casestudy:ResourceToCostItemAssignment_15
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 15" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refParamUtilizationFactor "0.0057" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+.
+casestudy:ResourceToCostItemAssignment_16
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 16" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res3 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refParamUtilizationFactor "0.0057" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+.
+casestudy:ResourceToCostItemAssignment_17
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 17" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "1,01" ;
+  cr:refResource <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM> ;
+.
+casestudy:ResourceToCostItemAssignment_18
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 18" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "0.0725" ;
+  cr:refResource <http://example.org/casestudy#EquipmentResource_RP.00.40.10.0010.b> ;
+.
+casestudy:ResourceToCostItemAssignment_19
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 19" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "0.6" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+.
+casestudy:ResourceToCostItemAssignment_2
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 2" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.08" ;
+  cr:refResource <http://example.org/casestudy#EquipmentResource_RP.01.00.00.0040.a> ;
+.
+casestudy:ResourceToCostItemAssignment_20
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 20" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "0.6" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+.
+casestudy:ResourceToCostItemAssignment_21
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 21" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "0.6" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+.
+casestudy:ResourceToCostItemAssignment_22
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 22" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res4 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refParamUtilizationFactor "0.58" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+.
+casestudy:ResourceToCostItemAssignment_3
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 3" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "1" ;
+  cr:refResource <http://example.org/casestudy#EquipmentResource_RP.00.30.05.0010.a> ;
+.
+casestudy:ResourceToCostItemAssignment_4
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 4" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.15" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0005.-> ;
+.
+casestudy:ResourceToCostItemAssignment_5
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 5" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.15" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0010.-> ;
+.
+casestudy:ResourceToCostItemAssignment_6
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 6" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.15" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+.
+casestudy:ResourceToCostItemAssignment_7
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 7" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res1 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refParamUtilizationFactor "0.08" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+.
+casestudy:ResourceToCostItemAssignment_8
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 8" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refParamUtilizationFactor "1" ;
+  cr:refResource <http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.b> ;
+.
+casestudy:ResourceToCostItemAssignment_9
+  rdf:type cr:ResourceToCostItemAssignment ;
+  rdfs:label "Resource to cost item assignment 9" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Cost-Res2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refParamUtilizationFactor "0.11" ;
+  cr:refResource <http://example.org/casestudy#LabourResource_RU.00.00.00.0015.-> ;
+.
+casestudy:StLB
+  rdf:type cterm:Classification ;
+  rdfs:label "StLB" ;
+  cterm:code "013-037-11-21-48-85" ;
+  cterm:hasClassificationSystem cterm:StLB ;
+.
+<http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "OC.EEA.Pa10.A6415.J0001.0025.-" ;
+  ci:descriptionDetail """OP1 OPERA: Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0.
+	RM2 Impasto preconfezionato di cemento generico; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza 	[classe] = S4 | classe di resistenza [classe] = C16/20 | classe di esposizione [classe] = X0. Componenti: legante generico, aggregato generico, legante riciclato
+	SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE
+LV1 LAVORO: Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.
+	RP2 Gru a torre a rotazione in alto; altezza sotto gancio [m] ≤ 34,0 | sbraccio [m] ≤ 31,0; portata [t] ≤ 1,0; escluso: f.e.m., escluso basamento
+	SPECIFICHE TECNICHE: già geometryallata; criterio di misurazione: giorno di presenza in cantiere""" ;
+  ci:descriptionGeneral """OPERA: Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0.
+LAVORO: Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.""" ;
+  ci:hasPart <http://example.org/casestudy#ConstructionComponent_OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:prefix "LOM241." ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 261.87 ;
+.
+casestudy:TaskToCostItemAssignment_1
+  rdf:type cr:TaskToCostItemAssignment ;
+  rdfs:label "Task to cost item assignment 1" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Cost1 ;
+  cr:refCostItem <http://example.org/casestudy#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_LEANCONCRETECASTING_4152F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToCostItemAssignment_2
+  rdf:type cr:TaskToCostItemAssignment ;
+  rdfs:label "Task to cost item assignment 2" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Cost2 ;
+  cr:refCostItem <http://example.org/casestudy#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_CONCRETECASTING_5052F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToCostItemAssignment_3
+  rdf:type cr:TaskToCostItemAssignment ;
+  rdfs:label "Task to cost item assignment 3" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Cost2 ;
+  cr:refCostItem <http://example.org/casestudy#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_REBARS_4952F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToCostItemAssignment_4
+  rdf:type cr:TaskToCostItemAssignment ;
+  rdfs:label "Task to cost item assignment 4" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Cost2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKS_4A52F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToCostItemAssignment_5
+  rdf:type cr:TaskToCostItemAssignment ;
+  rdfs:label "Task to cost item assignment 5" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Cost2 ;
+  cr:refCostItem <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKSREMOVAL_4252F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_1
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 1" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo1 ;
+  cr:refGeometry geometry:IfcSlab_2649 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_LEANCONCRETECASTING_4152F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_10
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 10" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo4 ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKSREMOVAL_4252F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_2
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 2" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo2 ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_CONCRETECASTING_5052F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_3
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 3" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo2 ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_REBARS_4952F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_4
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 4" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo2 ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKS_4A52F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_5
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 5" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo2 ;
+  cr:refGeometry geometry:IfcSlab_905 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKSREMOVAL_4252F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_6
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 6" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo3 ;
+  cr:refGeometry geometry:IfcSlab_1051 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_LEANCONCRETECASTING_4152F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_7
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 7" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo3 ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_CONCRETECASTING_5052F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_8
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 8" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo3 ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_REBARS_4952F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+casestudy:TaskToGeometryAssignment_9
+  rdf:type cr:TaskToGeometryAssignment ;
+  rdfs:label "Task to geometry assignment 9" ;
+  cr:isAssignmentOf casestudy:AssignmentSet_Task-Geo3 ;
+  cr:refGeometry geometry:IfcSlab_2362 ;
+  cr:refTask <https://icdd.vm.rub.de/dev01/api/v1/projects/Y8IW4V9TvUiN4CfR2gB-yQ/containerTypes/1/containers/WRGQpmrX3k2PPDZ_OhZDNQ/cto/scheduling#Task_FORMWORKS_4A52F6CF-A19D-EF11-A011-A059508B7099> ;
+.
+<http://example.org/casestudy#TemporaryComponent_LP.EEA.Pa04.A1020.Qa000.0000.->
+  rdf:type ci:TemporaryComponent ;
+  ci:code "LP.EEA.Pa04.A1020.Qa000.0000.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+	RT2 Cassaforma tradizionale in legno; impiego:  fondazioni continue; incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete 	o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi)
+	SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasActivity <http://example.org/casestudy#Activity_LV.Pa04.A1020.0000.-> ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:hasWork <http://example.org/casestudy#Work_OS.A1020.Qa000.0000.-> ;
+  ci:partOf <http://example.org/casestudy#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Buildings ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasMaterial cterm:GenericNaturalWood ;
+  cterm:hasObject cterm:Residences ;
+.
+<http://example.org/casestudy#WorkOfConstructionComponent_OP.A6415.J0001.0025.->
+  rdf:type ci:WorkOfConstructionComponent ;
+  rdfs:label "Work of construction component OP.A6415.J0001.0025.-" ;
+  ci:code "OP.A6415.J0001.0025.-" ;
+  ci:descriptionDetail """RM2 Impasto preconfezionato di cemento generico; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza 	[classe] = S4 | classe di resistenza [classe] = C16/20 | classe di esposizione [classe] = X0. Componenti: legante generico, aggregato generico, legante riciclato
+SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE""" ;
+  ci:descriptionGeneral "Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0." ;
+  ci:hasSubComponent <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0275.-_CAM> ;
+  ci:workOf <http://example.org/casestudy#ConstructionComponent_OC.EEA.Pa10.A6415.J0001.0025.-> ;
+  cterm:hasCategory cterm:FoundationSystems ;
+  cterm:hasFamily cterm:Soil ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Subfoundation ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_13 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_14 ;
+.
+<http://example.org/casestudy#WorkOfConstructionComponent_OP.E5100.J0001.0000.b>
+  rdf:type ci:WorkOfConstructionComponent ;
+  ci:cam "false"^^xsd:boolean ;
+  ci:code "OP.E5100.J0001.0000.b" ;
+  ci:descriptionDetail "RM1 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150" ;
+  ci:descriptionGeneral "Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2." ;
+  ci:hasSubComponent <http://example.org/casestudy#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:FoundationSystems ;
+  cterm:hasClassification casestudy:StLB ;
+  cterm:hasFamily cterm:StructuralEngineering ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Foundation ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_1 ;
+  cterm:hasPerformanceParameter casestudy:PerformanceParameter_2 ;
+.
+<http://example.org/casestudy#WorkOfConstructionComponent_OP.E9700.Sb017.0255.->
+  rdf:type ci:WorkOfConstructionComponent ;
+  rdfs:label "WorkOfConstructionComponent OP.E9700.Sb017.0255.-" ;
+  ci:code "OP.E9700.Sb017.0255.-" ;
+  ci:descriptionGeneral "Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in cemento armato. Incluso: sormonti; sfrido; legature." ;
+  ci:hasSubComponent <http://example.org/casestudy#MaterialResource_RM.30.10.00.Sb017.0000.-_CAM> ;
+  ci:hasSubComponent <http://example.org/casestudy#MaterialResource_RM.38.15.95.R0001.0300.-> ;
+  ci:workOf <http://example.org/casestudy#ConstructionComponent_OC.EEA.a02.E9700.Sb017.0255.-> ;
+  cterm:hasCategory cterm:ComplementarySystems ;
+  cterm:hasFamily cterm:StructuralEngineering ;
+  cterm:hasMaterial cterm:FerrousAlloySteelB450C ;
+  cterm:hasObject cterm:Reinforcement ;
+  cterm:hasType cterm:RibbedBars ;
+  cterm:hasUse cterm:ConcreteStructures ;
+.
+<http://example.org/casestudy#Work_OS.A1020.Qa000.0000.->
+  rdf:type ci:WorkOfTemporaryComponent ;
+  rdfs:label "Work OS.A1020.Qa000.0000.-" ;
+  ci:code "OS.A1020.Qa000.0000.-" ;
+  ci:descriptionDetail """RT2 Cassaforma tradizionale in legno; impiego:  fondazioni continue; incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete 	o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi)
+SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto""" ;
+  ci:descriptionGeneral "Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi." ;
+  ci:hasSubComponent <http://example.org/casestudy#EquipmentResource_RT.00.00.30.0010.b> ;
+  ci:techSpecs "spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto" ;
+  ci:workOf <http://example.org/casestudy#TemporaryComponent_LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cterm:hasCategory cterm:SitePreparationSystems ;
+  cterm:hasFamily <https://schema.org/ConstrutcionSite> ;
+  cterm:hasMaterial cterm:GenericNaturalWood ;
+  cterm:hasObject cterm:Formwork ;
+.
