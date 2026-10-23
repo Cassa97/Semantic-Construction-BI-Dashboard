@@ -22,7 +22,7 @@ The workflow described in the study comprises the following stages:
 
 **Simplified flow:**
 <p align="center">
-  <img width="1057" alt="Figure2" src="https://github.com/user-attachments/assets/26073e4c-33d7-42c6-910a-05c3ada95d2d" />
+  <img width="500" alt="Figure2" src="https://github.com/user-attachments/assets/26073e4c-33d7-42c6-910a-05c3ada95d2d" />
 </p>
 
 The sample RDF dataset made available with the research package is intended to allow reproduction of the workflow **starting from the prepared semantic data**. Reproduction of the original native-file-to-RDF conversion process requires the separate conversion tools and source files used in the earlier research.
