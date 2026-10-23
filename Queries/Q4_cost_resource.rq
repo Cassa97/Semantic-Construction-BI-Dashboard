@@ -1,7 +1,4 @@
 # Q4 - Cost-Resource
-# Source: journal manuscript, Listing 4.
-# Retrieves resources explicitly assigned to cost items and their semantic types.
-# This query does not compare quantities or detect inconsistencies automatically.
 
 PREFIX cr:  <https://w3id.org/cr#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
