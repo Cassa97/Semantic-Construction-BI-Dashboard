@@ -115,18 +115,11 @@ The study extends a DFBI 2025 conference contribution by **Cassandro and Mirarch
 
 **Publication citation:** Add the final journal bibliographic reference and DOI when available.
 
-## Data availability and permanent archive
-
-**GitHub repository:** Add the public repository URL after publication.
-
-**Permanent archive (Zenodo DOI):** Add the verified DOI after a release is archived and publicly accessible.
-
-For the journal's Data Availability Statement, reference the permanent archived release and verify that it contains the RDF sample, all five SPARQL query files, the `.pbit` template, and sufficient instructions to reproduce the demonstrated views.
 
 ## License and contact
 
-**License:** To be specified by the repository maintainers. Do not assume that the underlying project data, ontologies, and source code all have the same reuse permissions.
+**License:** Creative Commons Attribution 4.0 International.
 
-**Research authors:** Jacopo Cassandro and Claudio Mirarchi, Politecnico di Milano.
+**Research authors:** Dr. - Ing. Jacopo Cassandro (jacopo.cassandro@polimi.it) and Prof. Claudio Mirarchi (claudio.mirarchi@polimi.it), Politecnico di Milano.
 
 For scholarly questions, please use the contact information provided in the associated publication or the repository's issue tracker if enabled.
