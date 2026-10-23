@@ -1,9 +1,4 @@
 # Q3 - Activity-Cost
-# Source: journal manuscript, Listing 3 (revised for publication).
-# Retrieves explicitly established task-to-cost-item associations.
-# OPTIONAL preserves tasks even when they have no cost-item assignment.
-# The five-level numeric WBS filter in the original listing has been removed.
-# 'ci:' is declared as in the manuscript, although this query uses cr: assignments.
 
 PREFIX dtc:    <https://dtc-ontology.cms.ed.tum.de/ontology#>
 PREFIX cr:     <https://w3id.org/cr#>
