@@ -1,0 +1,21 @@
+# Q4 - Cost-Resource
+# Source: journal manuscript, Listing 4.
+# Retrieves resources explicitly assigned to cost items and their semantic types.
+# This query does not compare quantities or detect inconsistencies automatically.
+
+PREFIX cr:  <https://w3id.org/cr#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?costItem ?resource ?resourceType
+WHERE {
+    ?assign_res_cost a cr:ResourceToCostItemAssignment .
+    ?assign_res_cost cr:refCostItem ?costItem .
+    ?assign_res_cost cr:refResource ?resource .
+    ?resource rdf:type ?resourceType .
+
+    FILTER (
+        STRSTARTS(STR(?resourceType), "https://w3id.org/cr#") &&
+        ?resourceType != cr:Resource
+    )
+}
+ORDER BY ?costItem ?resource

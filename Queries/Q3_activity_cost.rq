@@ -1,0 +1,26 @@
+# Q3 - Activity-Cost
+# Source: journal manuscript, Listing 3 (revised for publication).
+# Retrieves explicitly established task-to-cost-item associations.
+# OPTIONAL preserves tasks even when they have no cost-item assignment.
+# The five-level numeric WBS filter in the original listing has been removed.
+# 'ci:' is declared as in the manuscript, although this query uses cr: assignments.
+
+PREFIX dtc:    <https://dtc-ontology.cms.ed.tum.de/ontology#>
+PREFIX cr:     <https://w3id.org/cr#>
+PREFIX ci:     <https://w3id.org/ci#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX msproj: <http://schemas.microsoft.com/project#>
+
+SELECT DISTINCT ?task ?taskLabel ?assign_cost ?costItem
+WHERE {
+    ?task a dtc:Task .
+    OPTIONAL { ?task rdfs:label ?taskLabel . }
+    OPTIONAL { ?task msproj:WBS ?wbs . }
+
+    OPTIONAL {
+        ?assign_cost a cr:TaskToCostItemAssignment .
+        ?assign_cost cr:refTask ?task .
+        ?assign_cost cr:refCostItem ?costItem .
+    }
+}
+ORDER BY ?taskLabel ?wbs ?costItem

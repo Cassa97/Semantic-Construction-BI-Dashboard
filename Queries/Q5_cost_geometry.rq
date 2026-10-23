@@ -1,0 +1,21 @@
+# Q5 - Cost-Geometry
+# Source: journal manuscript, Listing 5.
+# Retrieves geometry explicitly associated with cost items and available IFC GlobalIds.
+# This query does not check alignment with scheduling activities automatically.
+
+PREFIX cr:      <https://w3id.org/cr#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+
+SELECT DISTINCT ?costItem ?assign_cost_geom ?geometry ?geometryGlobalId
+WHERE {
+    ?assign_cost_geom a cr:CostItemToGeometryAssignment .
+    ?assign_cost_geom cr:refCostItem ?costItem .
+    ?assign_cost_geom cr:refGeometry ?geometry .
+
+    OPTIONAL {
+        ?geometry ifc:globalId_IfcRoot ?gidNode .
+        ?gidNode express:hasString ?geometryGlobalId .
+    }
+}
+ORDER BY ?costItem ?geometry

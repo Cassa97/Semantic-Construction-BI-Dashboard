@@ -1,0 +1,31 @@
+# Q2 - Activity-Geometry
+# Source: journal manuscript, Listing 2 (revised for publication).
+# Retrieves geometry associations and IFC GlobalIds for scheduling activities.
+# OPTIONAL preserves tasks even when they have no geometry assignment.
+# The five-level numeric WBS filter in the original listing has been removed.
+
+PREFIX dtc:    <https://dtc-ontology.cms.ed.tum.de/ontology#>
+PREFIX cr:     <https://w3id.org/cr#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX msproj: <http://schemas.microsoft.com/project#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX ifc:    <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+
+SELECT DISTINCT ?task ?taskLabel ?assign_task_geom ?geometry ?geometryGlobalId
+WHERE {
+    ?task a dtc:Task .
+    OPTIONAL { ?task rdfs:label ?taskLabel . }
+    OPTIONAL { ?task msproj:WBS ?wbs . }
+
+    OPTIONAL {
+        ?assign_task_geom a cr:TaskToGeometryAssignment .
+        ?assign_task_geom cr:refTask ?task .
+        ?assign_task_geom cr:refGeometry ?geometry .
+
+        OPTIONAL {
+            ?geometry ifc:globalId_IfcRoot ?gidNode .
+            ?gidNode express:hasString ?geometryGlobalId .
+        }
+    }
+}
+ORDER BY ?wbs ?task
