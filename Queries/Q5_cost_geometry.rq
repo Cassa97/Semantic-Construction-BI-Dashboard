@@ -1,7 +1,4 @@
 # Q5 - Cost-Geometry
-# Source: journal manuscript, Listing 5.
-# Retrieves geometry explicitly associated with cost items and available IFC GlobalIds.
-# This query does not check alignment with scheduling activities automatically.
 
 PREFIX cr:      <https://w3id.org/cr#>
 PREFIX express: <https://w3id.org/express#>
