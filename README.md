@@ -47,7 +47,10 @@ The research release is intended to contain the following files. **Verify that e
 semantic-construction-dashboard/
 ├── README.md
 ├── data/
-│   └── sample_dataset.ttl
+│   └── casestudy.ttl
+│   └── cost.ttl
+│   └── resources.ttl
+│   └── Scheduling_03.instances.ttl
 ├── queries/
 │   ├── Q1_activity_resource.rq
 │   ├── Q2_activity_geometry.rq
@@ -55,12 +58,13 @@ semantic-construction-dashboard/
 │   ├── Q4_cost_resource.rq
 │   └── Q5_cost_geometry.rq
 └── dashboard/
-    └── semantic_construction_dashboard.pbit
+    └── Dashboard Q1-3-4.pbit
+    └── Dashboard Q2-5.pbit
 ```
 
-- **`data/`** — An anonymized RDF sample with the entities and manually prepared cross-domain assignments necessary to run the published queries.
+- **`data/`** — The RDF sample with the entities and manually prepared cross-domain assignments necessary to run the published queries.
 - **`queries/`** — The five SPARQL 1.1 query files corresponding to the dashboard perspectives.
-- **`dashboard/`** — A Power BI template (`.pbit`) containing the dashboard layout and data model, without the original project's confidential data.
+- **`dashboard/`** — The Power BI template (`.pbit`) containing the dashboards layout and data model, without the original project's confidential data.
 
 Any additional scripts or documentation included in a release should be described here and have their execution requirements documented.
 
