@@ -1,8 +1,4 @@
 # Q2 - Activity-Geometry
-# Source: journal manuscript, Listing 2 (revised for publication).
-# Retrieves geometry associations and IFC GlobalIds for scheduling activities.
-# OPTIONAL preserves tasks even when they have no geometry assignment.
-# The five-level numeric WBS filter in the original listing has been removed.
 
 PREFIX dtc:    <https://dtc-ontology.cms.ed.tum.de/ontology#>
 PREFIX cr:     <https://w3id.org/cr#>
