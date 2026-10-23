@@ -1,8 +1,4 @@
 # Q1 - Activity-Resource
-# Source: journal manuscript, Listing 1 (revised for publication).
-# Retrieves resources explicitly assigned to scheduling activities and their types.
-# The five-level numeric WBS filter in the original listing has been removed.
-# Cross-domain assignment records are manually established in the source RDF.
 
 PREFIX dtc:    <https://dtc-ontology.cms.ed.tum.de/ontology#>
 PREFIX cr:     <https://w3id.org/cr#>
