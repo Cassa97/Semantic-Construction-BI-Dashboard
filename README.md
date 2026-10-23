@@ -21,8 +21,7 @@ The workflow described in the study comprises the following stages:
 5. **Visualization.** Power BI reads the exported tables and represents their contents through interactive dashboard views. Updated CSV files can be reflected in the dashboard after refreshing its data sources.
 
 **Simplified flow:**
-
-[Figure2.pdf](https://github.com/user-attachments/files/33867959/Figure2.pdf)
+<img width="2114" height="2670" alt="Figure2" src="https://github.com/user-attachments/assets/26073e4c-33d7-42c6-910a-05c3ada95d2d" />
 
 
 The sample RDF dataset made available with the research package is intended to allow reproduction of the workflow **starting from the prepared semantic data**. Reproduction of the original native-file-to-RDF conversion process requires the separate conversion tools and source files used in the earlier research.
