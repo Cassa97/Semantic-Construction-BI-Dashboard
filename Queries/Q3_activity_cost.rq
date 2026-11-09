@@ -5,13 +5,13 @@ PREFIX cr:     <https://w3id.org/cr#>
 PREFIX ci:     <https://w3id.org/ci#>
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX msproj: <http://schemas.microsoft.com/project#>
-
-SELECT DISTINCT ?task ?taskLabel ?assign_cost ?costItem
+SELECT DISTINCT ?task ?taskLabel ?assign_cost ?costItem ?wbs
 WHERE {
     ?task a dtc:Task .
+    FILTER EXISTS { ?task dtc:isSubprocessOf ?parent . }
+    FILTER NOT EXISTS { ?task dtc:hasSubprocess ?child . }
     OPTIONAL { ?task rdfs:label ?taskLabel . }
     OPTIONAL { ?task msproj:WBS ?wbs . }
-
     OPTIONAL {
         ?assign_cost a cr:TaskToCostItemAssignment .
         ?assign_cost cr:refTask ?task .
