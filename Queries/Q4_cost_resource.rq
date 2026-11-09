@@ -2,14 +2,12 @@
 
 PREFIX cr:  <https://w3id.org/cr#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-SELECT DISTINCT ?costItem ?resource ?resourceType
+SELECT DISTINCT ?costItem ?resource ?resourceType ?assign_res_cost
 WHERE {
     ?assign_res_cost a cr:ResourceToCostItemAssignment .
     ?assign_res_cost cr:refCostItem ?costItem .
     ?assign_res_cost cr:refResource ?resource .
     ?resource rdf:type ?resourceType .
-
     FILTER (
         STRSTARTS(STR(?resourceType), "https://w3id.org/cr#") &&
         ?resourceType != cr:Resource
