@@ -1,18 +1,16 @@
 # Q5 - Cost-Geometry
 
-PREFIX cr:      <https://w3id.org/cr#>
+PREFIX cr: <https://w3id.org/cr#>
 PREFIX express: <https://w3id.org/express#>
-PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
-
+PREFIX ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
 SELECT DISTINCT ?costItem ?assign_cost_geom ?geometry ?geometryGlobalId
 WHERE {
-    ?assign_cost_geom a cr:CostItemToGeometryAssignment .
-    ?assign_cost_geom cr:refCostItem ?costItem .
-    ?assign_cost_geom cr:refGeometry ?geometry .
-
-    OPTIONAL {
-        ?geometry ifc:globalId_IfcRoot ?gidNode .
-        ?gidNode express:hasString ?geometryGlobalId .
-    }
+  ?assign_cost_geom a cr:CostItemToGeometryAssignment .
+  ?assign_cost_geom cr:refCostItem ?costItem .
+  ?assign_cost_geom cr:refGeometry ?geometry .
+  OPTIONAL {
+    ?geometry ifc:globalId_IfcRoot ?gidNode .
+    ?gidNode express:hasString ?geometryGlobalId .
+  }
 }
 ORDER BY ?costItem ?geometry
