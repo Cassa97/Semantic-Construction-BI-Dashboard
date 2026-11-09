@@ -58,13 +58,13 @@ semantic-construction-dashboard/
 │   ├── Q4_cost_resource.rq
 │   └── Q5_cost_geometry.rq
 └── dashboard/
-    └── Dashboard Q1-3-4.pbit
-    └── Dashboard Q2-5.pbit
+    └── Dashboard Q1-3-4.pbix
+    └── Dashboard Q2-5.pbix
 ```
 
 - **`data/`** — The RDF sample with the entities and manually prepared cross-domain assignments necessary to run the published queries.
 - **`queries/`** — The five SPARQL 1.1 query files corresponding to the dashboard perspectives.
-- **`dashboard/`** — The Power BI template (`.pbit`) containing the dashboards layout and data model, without the original project's confidential data.
+- **`dashboard/`** — The Power BI dashboard (`.pbix`) containing the developed dashboards in the experimentation phase.
 
 Any additional scripts or documentation included in a release should be described here and have their execution requirements documented.
 
@@ -74,16 +74,16 @@ Any additional scripts or documentation included in a release should be describe
 
 - An RDF environment that supports **SPARQL 1.1** queries and can load Turtle (`.ttl`) files (for example, a compatible local triple store).
 - A way to export SPARQL `SELECT` results to CSV while preserving the query variable names as column headers.
-- **Microsoft Power BI Desktop** to open the `.pbit` template.
+- **Microsoft Power BI Desktop** to open the `.pbix` dashboard.
 - **Python**, only if using the automated SPARQL-to-CSV extraction procedure described in the paper or an accompanying script.
 
 ### Steps
 
-1. **Obtain the research package.** Clone or download this repository, and locate the RDF sample, five queries, and Power BI template.
+1. **Obtain the research package.** Clone or download this repository, and locate the RDF sample, five queries, and Power BI dashboard.
 2. **Load the RDF data.** Import `data/sample_dataset.ttl` into a SPARQL-capable RDF environment. Ensure that all required triples, including the manually prepared cross-domain assignment instances, are loaded.
 3. **Run Q1–Q5.** Execute the `.rq` files against the loaded graph. Preserve the namespace IRIs used in the dataset: RDF identifiers using `http://` and `https://` are not automatically interchangeable.
-4. **Export the results.** Save each query's tabular result as a CSV file. Preserve column names, value types, and the IFC `GlobalId` strings where returned. The Power BI template must be configured to read the resulting tables.
-5. **Connect the Power BI template.** Open `dashboard/semantic_construction_dashboard.pbit` in Power BI Desktop. If prompted, set or update the CSV file locations in the template's parameters or Power Query data-source settings. Ensure that each query output is connected to its corresponding dataset/view.
+4. **Export the results.** Save each query's tabular result as a CSV file. Preserve column names, value types, and the IFC `GlobalId` strings where returned.
+5. **Connect the Power BI dashboard.** Open `dashboard/semantic_construction_dashboard.pbix` in Power BI Desktop. If prompted, set or update the CSV file locations in the Power Query data-source settings. Ensure that each query output is connected to its corresponding dataset/view.
 6. **Refresh and inspect.** Refresh the Power BI data model and inspect the five dashboard views. The dashboard displays **query results from the prepared dataset**, rather than dynamically querying the knowledge graph.
 
 **Implementation note:** The paper describes an automated Python-to-CSV extraction bridge. If that bridge is not included in the published package, Steps 3–4 can be performed using a SPARQL-capable application with CSV export. In that case, the sample reproduces the query outputs and dashboard views, **not the automated export schedule**. For full pipeline replication, the extraction script and the exact CSV-to-Power-BI source mappings must also be released.
